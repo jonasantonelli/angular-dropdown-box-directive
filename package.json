@@ -1,0 +1,51 @@
+{
+  "name": "AngularDropdownBox",
+  "description": "Dropdown Box - AngularJS Directive",
+  "version": "1.0.0",
+  "homepage": "",
+  "author": "Jonas Antonell",
+  "private": false,
+  "assets": {
+    "config": {
+      "name": "dropdown-box",
+      "less": "assets/less",
+      "application": "assets/application",
+      "published": {
+        "js": "assets/published/js",
+        "css": "assets/published/css",
+        "images": "assets/published/images"
+      }
+    },
+    "watch": {
+      "less": "assets/less",
+      "js": "assets/application"
+    },
+
+    "bootstrap": {
+      "name": "bootstrap",
+      "js": "assets/vendor/bootstrap/js",
+      "css": "assets/vendor/bootstrap/css"
+    },
+    "angular": {
+      "folder": "assets/vendor/angular/"
+    }
+  },
+
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-csscomb": "latest",
+    "grunt-exec": "latest",
+    "grunt-notify": "latest",
+    "load-grunt-config": "latest",
+    "load-grunt-tasks": "latest",
+    "time-grunt": "latest"
+  },
+  "engines": {
+    "node": "~0.10.35"
+  }
+}

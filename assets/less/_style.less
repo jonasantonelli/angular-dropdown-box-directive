@@ -1,0 +1,78 @@
+body > .container
+{
+	padding:60px 15px 0;
+}
+
+
+
+.cards
+{
+	margin: 0px;
+	padding:0px;
+
+	li
+	{
+		list-style: none;
+		margin-bottom: 8px;
+		height: 80px;
+		box-shadow: 0 2px 2px rgba(0,0,0,0.1)
+	}
+
+
+
+	.cards-image, .cards-content
+	{
+		display: inline-block;
+		float: left;
+	}
+
+	.cards-image
+	{
+		width:80px;
+		img
+		{
+			border-radius: 4px 0 0 4px;
+		}
+	}
+
+	.cards-content
+	{
+		width:calc(100% - 80px);
+		height: 80px;
+		background:#F0F0F0;
+		
+		padding: 5px 10px;
+		border-radius: 0 4px 4px 0;
+
+	}
+}
+
+
+.example
+{
+	background-color: rgb(255, 255, 255);
+	border-color: rgb(221, 221, 221);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 4px 4px 0px 0px;
+
+	box-shadow: 0 0px 4px rgba(0,0,0,0.1);
+	position: relative;
+	padding: 45px 15px 15px;
+	margin: 0px 0px 15px;
+
+	&:after
+	{
+		display: block;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		font-size: 12px;
+		font-weight: 700;
+		color: rgb(149, 149, 149);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		content: 'Example';
+	}
+
+}

@@ -1,0 +1,39 @@
+{
+  "node": true,
+  "browser": true,
+  "es5": false,
+  "esnext": true,
+  "bitwise": false,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "immed": false,
+  "indent": 4,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "quotmark": "single",
+  "regexp": true,
+  "undef": true,
+  "unused": true,
+  "strict": true,
+  "trailing": true,
+  "smarttabs": true,
+  "debug": true,
+  "globals": {
+    "angular": false,
+    "FileReaderSync": false
+  },
+  "predef": [
+    "protractor",
+    "expect",
+    "browser",
+    "by",
+    "element",
+    "it",
+    "describe",
+    "beforeEach",
+    "afterEach",
+    "grunt"
+  ]
+}
