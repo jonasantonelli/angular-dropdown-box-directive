@@ -1,4 +1,4 @@
-/*
+    /*
 Development by Jonas Antonelli
 Attributes:
 Apply this directive in parent element
@@ -106,19 +106,29 @@ placement: (left, top, bottom, right) //default right
                         case 'right':
                             element.content.css({
                                 'left': element.button.outerWidth() + settings.distance,
-                                'top': '-15px'
+                                'top': ( (element.content.outerHeight()/2) - (element.button.outerHeight()/2) ) * -1
                             });
                             break;
 
                         case 'left':
-                            console.log('Left:' + angular.element('.' + settings.arrowClass));
+                            element.content.css({
+                                'right': element.button.outerWidth() + settings.distance,
+                                'top': ( (element.content.outerHeight()/2) - (element.button.outerHeight()/2) ) * -1
+                            });
                             break;
 
                         case 'top':
-                            console.log('Top:' + element.button.outerHeight());
+                            element.content.css({
+                                'bottom': element.button.outerHeight() + settings.distance,
+                                'right' : (element.button.outerWidth() / 2) * -1
+                            });
                             break;
+
                         case 'bottom':
-                            console.log('Bottom:' + element.button.outerHeight());
+                            element.content.css({
+                                'left': (element.button.outerWidth() / 2) * -1,
+                                'top': element.button.outerHeight() + settings.distance
+                            });
                             break;
                     }
                 }
