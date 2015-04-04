@@ -61,10 +61,9 @@ body > .container {
   outline: 0;
 }
 .dropdown-box .dropdown-box-content {
+  display: block;
   position: absolute;
   z-index: 1060;
-  display: none;
-  width: 326px;
   padding: 1px;
   font-size: 14px;
   font-weight: 400;
@@ -73,6 +72,10 @@ body > .container {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 1px;
   box-shadow: 0 0px 6px 1px rgba(0, 0, 0, 0.15);
+  width: 326px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s ease-in-out;
 }
 .dropdown-box .dropdown-box-content .dropdown-box-header {
   padding: 8px 14px;
@@ -165,5 +168,6 @@ body > .container {
   border-top-color: #e5e5e5;
 }
 .dropdown-box.in .dropdown-box-content {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }

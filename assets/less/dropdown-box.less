@@ -18,13 +18,12 @@
 
     .dropdown-box-content
     {
-        display: none;
+        display: block;
 
         position: absolute;
 
         z-index: 1060;
-        display: none;
-        width: @dropdown-box-width;
+        
         padding: 1px;
 
         font-size: 14px;
@@ -35,6 +34,14 @@
         border: 1px solid rgba(0, 0, 0, 0.10);
         border-radius: 1px;
         box-shadow: 0 0px 6px 1px rgba(0, 0, 0, 0.15);
+
+        width: @dropdown-box-width;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all 0.1s ease-in-out;
+
 
         // --- Header
         .dropdown-box-header
@@ -176,7 +183,9 @@
     {
         .dropdown-box-content
         {
-            display: block;
+            opacity: 1;
+            visibility: visible;
+            
         }
     }
 }
