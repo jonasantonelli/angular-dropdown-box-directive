@@ -48,7 +48,7 @@ Check out the sample app: http://jonasantonelli.com/angular-dropdown-box/sample/
 
 ### Complete Example :
  ```html
- <button class="btn btn-primary" dropdown-box target="content-target" placement="left" mouseover >Button</button>
+<button class="btn btn-primary" dropdown-box target="content-target" placement="left" mouseover >Button</button>
 <div id="content-target">
 Content....
 </div>
