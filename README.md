@@ -25,30 +25,30 @@ Check out the sample app: http://jonasantonelli.com/angular-dropdown-box/sample/
 
 ## Directive options :
 
-# Target :
+### Target :
  - Add a `target` attribute with the value of the element that will block its content.
 ```html
 <button class="btn" dropdown-box target="content" >Button</button>
-<div id="content>
+<div id="content">
  My content
 </div>
 ```
 
-# Placement :
+### Placement :
  - Add a `placement` attribute (default = `right`) with the value to be aligned (`left | right | top | bottom`
 ```html
 <button class="btn" dropdown-box placement="top" >Button</button>
 ```
 
-# Mouseover :
+### Mouseover :
  - Add a `mouseover` attribute for to set the event that will trigger your button.
 ```html
 <button class="btn" dropdown-box mouseover >Button</button>
 ```
 
-# Complete Example :
+### Complete Example :
  ```html
-<button class="btn btn-primary" dropdown-box target="content-target" placement="left" mouseover >Button</button>
+ <button class="btn btn-primary" dropdown-box target="content-target" placement="left" mouseover >Button</button>
 <div id="content-target">
 Content....
 </div>
