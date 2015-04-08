@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular-dropdown-box-directive by jonasantonelli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Angular-dropdown-box-directive</h1>
+      <h2 class="project-tagline">Angular Dropdown Box is a directive that facilitates the creation of dropdown components without using Bootstrap Dropdown Component.</h2>
+      <a href="https://github.com/jonasantonelli/angular-dropdown-box-directive" class="btn">View on GitHub</a>
+      <a href="https://github.com/jonasantonelli/angular-dropdown-box-directive/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/jonasantonelli/angular-dropdown-box-directive/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="angular-dropdown-box" class="anchor" href="#angular-dropdown-box" aria-hidden="true"><span class="octicon octicon-link"></span></a>Angular Dropdown Box</h1>
+
+<h4>
+<a id="directive-dropdown-box" class="anchor" href="#directive-dropdown-box" aria-hidden="true"><span class="octicon octicon-link"></span></a>Directive Dropdown Box</h4>
+
+<hr>
+
+<p>Angular Dropdown Box is a directive that facilitates the creation of dropdown components without using Bootstrap Dropdown Component.</p>
+
+<p>Check out the sample app: <a href="http://jonasantonelli.com/angular-dropdown-box/sample/">http://jonasantonelli.com/angular-dropdown-box/sample/</a></p>
+
+<h2>
+<a id="get-started-" class="anchor" href="#get-started-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Started :</h2>
+
+<ul>
+<li>Add <code>jquery.js</code>, <code>angular.js</code>, <code>dropdown-box.directive.js</code> and <code>dropdown-box.css</code>|<code>dropdown-box.less</code> to your code:</li>
+</ul>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>dropdown-box.css<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span> /&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>angular.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>dropdown-box.directive.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<ul>
+<li><p>Add <code>'ja.dropdownbox'</code> as a module dependency to your app: <code>angular.module('app', ['ja.dropdownbox'])</code></p></li>
+<li><p>Add a <code>dropdown-box</code> attribute to your <code>&lt;button&gt;</code> or  <code>&lt;a&gt;</code>.</p></li>
+</ul>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn<span class="pl-pds">"</span></span> <span class="pl-e">dropdown-box</span> &gt;Button&lt;/<span class="pl-ent">button</span>&gt;</pre></div>
+
+<h2>
+<a id="directive-options-" class="anchor" href="#directive-options-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Directive options :</h2>
+
+<h3>
+<a id="target-" class="anchor" href="#target-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Target :</h3>
+
+<ul>
+<li>Add a <code>target</code> attribute with the value of the element that will block its content.</li>
+</ul>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn<span class="pl-pds">"</span></span> <span class="pl-e">dropdown-box</span> <span class="pl-e">target</span>=<span class="pl-s"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span> &gt;Button&lt;/<span class="pl-ent">button</span>&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>content<span class="pl-pds">"</span></span>&gt;
+ My content
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<h3>
+<a id="placement-" class="anchor" href="#placement-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Placement :</h3>
+
+<ul>
+<li>Add a <code>placement</code> attribute (default = <code>right</code>) with the value to be aligned (<code>left | right | top | bottom</code>
+</li>
+</ul>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn<span class="pl-pds">"</span></span> <span class="pl-e">dropdown-box</span> <span class="pl-e">placement</span>=<span class="pl-s"><span class="pl-pds">"</span>top<span class="pl-pds">"</span></span> &gt;Button&lt;/<span class="pl-ent">button</span>&gt;</pre></div>
+
+<h3>
+<a id="mouseover-" class="anchor" href="#mouseover-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mouseover :</h3>
+
+<ul>
+<li>Add a <code>mouseover</code> attribute for to set the event that will trigger your button.</li>
+</ul>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn<span class="pl-pds">"</span></span> <span class="pl-e">dropdown-box</span> <span class="pl-e">mouseover</span> &gt;Button&lt;/<span class="pl-ent">button</span>&gt;</pre></div>
+
+<h3>
+<a id="complete-example-" class="anchor" href="#complete-example-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Complete Example :</h3>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>btn btn-primary<span class="pl-pds">"</span></span> <span class="pl-e">dropdown-box</span> <span class="pl-e">target</span>=<span class="pl-s"><span class="pl-pds">"</span>content-target<span class="pl-pds">"</span></span> <span class="pl-e">placement</span>=<span class="pl-s"><span class="pl-pds">"</span>left<span class="pl-pds">"</span></span> <span class="pl-e">mouseover</span> &gt;Button&lt;/<span class="pl-ent">button</span>&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>content-target<span class="pl-pds">"</span></span>&gt;
+Content....
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jonasantonelli/angular-dropdown-box-directive">Angular-dropdown-box-directive</a> is maintained by <a href="https://github.com/jonasantonelli">jonasantonelli</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-61658115-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
+
