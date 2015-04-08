@@ -1,6 +1,9 @@
 @dropdown-box-bg: #E5E5E5;
 @dropdown-box-width: 326px;
 
+//Calc 50% - (22px/2) width of arrow
+@centralized-arrow: calc(50% - 11px);
+
 .dropdown-box
 {
 
@@ -91,7 +94,7 @@
         {
             > .arrow
             {
-                top:50%;
+                top: 50%;
                 left: -11px;
                 margin-top: -11px;
                 border-right-color: #999;
@@ -113,7 +116,7 @@
         {
             > .arrow
             {
-                top:50%;
+                top: 50%;
                 right: -11px;
                 margin-top: -11px;
                 border-left-color: #999;
@@ -136,8 +139,9 @@
         {
             > .arrow
             {
+
                 top:0px;
-                left: 50%;
+                left: @centralized-arrow;
                 margin-top: -11px;
                 border-bottom-color: #999;
                 border-bottom-color: rgba(0,0,0,.20);
@@ -159,7 +163,7 @@
             > .arrow
             {
                 bottom:-11px;
-                left: 50%;
+                left: @centralized-arrow;
                 margin-top: -11px;
                 border-top-color: #999;
                 border-top-color: rgba(0,0,0,.20);

@@ -139,7 +139,7 @@ body > .container {
 }
 .dropdown-box .dropdown-box-content.bottom > .arrow {
   top: 0px;
-  left: 50%;
+  left: calc(50% - 11px);
   margin-top: -11px;
   border-bottom-color: #999;
   border-bottom-color: rgba(0, 0, 0, 0.2);
@@ -154,7 +154,7 @@ body > .container {
 }
 .dropdown-box .dropdown-box-content.top > .arrow {
   bottom: -11px;
-  left: 50%;
+  left: calc(50% - 11px);
   margin-top: -11px;
   border-top-color: #999;
   border-top-color: rgba(0, 0, 0, 0.2);

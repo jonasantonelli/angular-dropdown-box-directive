@@ -20,7 +20,7 @@
 
 </head>
 
-<body ng-app="Application">
+<body ng-app="ja.dropdownbox">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -35,11 +35,7 @@
                 <a class="navbar-brand" href="#">Angular Dropdown Box Directive</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#demo">Demo</a></li>
-                    <li><a href="#usage">Usage</a></li>
-                </ul>
-
+             
             </div><!--/.nav-collapse -->
         </div>
     </nav>
@@ -47,7 +43,7 @@
     <!-- Begin page content -->
     <div class="container">
 
-       <section id="demo" ng-controller="ApplicationController" ng-cloak>
+       <section id="demo"  ng-cloak>
 
             <div class="page-header">
 
@@ -158,7 +154,7 @@
 
             <div class="example">
 
-                <button class="btn btn-primary" dropdown-box mouseover target="content-mouseover-target" >Dropdown Box</button>
+                <button class="btn btn-primary" dropdown-box mouseover placement="bottom" target="content-mouseover-target" >Dropdown Box</button>
 
                 <div id="content-mouseover-target">
                     <div class="dropdown-box-header">
@@ -186,21 +182,25 @@
             <h2>Usage</h2>
 
             <p>Via attributes, the dropdown box directive toggles hidden content by toggling the <code>.in</code> class on the parent item.</p>
-            
         
             <p>Add <code>dropdown-box</code> attribute to a link or a button.</p>
+
+            <br/>
 
             <h4>Setting the content target</h4>
 
             <p>Use the attribute <code>target="content"</code> as value of the #id of the content referenced in the dropdown-box</p>
-
+    
+            
             <h4>Directions</h4>
 
             <p>For setting direction, use <code>placement="value"</code> and one of following values <span class="label label-primary">left</span> <span class="label label-primary">right</span> <span class="label label-primary">top</span> <span class="label label-primary">bottom</span></p>
 
+
             <h4>Disable arrow</h4>
 
             <p>If you want disable the <strong>arrow</strong> of container that will toggle adding attribute <code>arrow="false"</code>.</p>
+
 
             <h4>Change Event</h4>
 
