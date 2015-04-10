@@ -1,0 +1,195 @@
+@dropdown-box-bg: #E5E5E5;
+@dropdown-box-width: 326px;
+
+//Calc 50% - (22px/2) width of arrow
+@centralized-arrow: calc(50% - 11px);
+
+.dropdown-box
+{
+
+    position:relative;
+    display: inline-block;
+
+    .dropdown-box-button
+    {
+        &:focus
+        {
+            outline:0;
+        }
+    }
+
+
+    .dropdown-box-content
+    {
+        display: block;
+
+        position: absolute;
+
+        z-index: 1060;
+        
+        padding: 1px;
+
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+
+        background-color: @dropdown-box-bg;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        border-radius: 1px;
+        box-shadow: 0 0px 6px 1px rgba(0, 0, 0, 0.15);
+
+        width: @dropdown-box-width;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: all 0.1s ease-in-out;
+
+
+        // --- Header
+        .dropdown-box-header
+        {
+            padding: 8px 14px;
+            margin: 0;
+            font-size: 14px;
+            background-color: @dropdown-box-bg;
+            border-radius: 5px 5px 0 0;
+
+            h4
+            {
+                color:#666;
+                text-align: center;
+            }
+        }
+
+        // --- Body
+        .dropdown-box-body
+        {
+            padding: 9px 14px;
+            overflow: hidden;
+        }
+   
+        // --- Placement
+        > .arrow
+        {
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border:11px solid transparent;
+
+            &:after
+            {
+                border: 10px solid transparent;
+                content: " ";
+                position: absolute;
+                display: block;
+                width: 0;
+                height: 0;
+            }
+        }
+
+        //Placement Right
+        &.right
+        {
+            > .arrow
+            {
+                top: 50%;
+                left: -11px;
+                margin-top: -11px;
+                border-right-color: #999;
+                border-right-color: rgba(0,0,0,.20);
+                border-left-width: 0;
+
+                &:after
+                {
+                    bottom: -10px;
+                    left: 1px;
+                    content: " ";
+                    border-right-color: @dropdown-box-bg;
+                    border-left-width: 0;
+                }
+            }
+        }
+
+        &.left
+        {
+            > .arrow
+            {
+                top: 50%;
+                right: -11px;
+                margin-top: -11px;
+                border-left-color: #999;
+                border-left-color: rgba(0,0,0,.20);
+                border-right-width: 0;
+
+                &:after
+                {
+                    bottom: -10px;
+                    left: -11px;
+                    content: " ";
+                    border-left-color: @dropdown-box-bg;
+                    border-right-width: 0;
+                }
+            }
+        }
+
+        //Placement Bottom
+        &.bottom
+        {
+            > .arrow
+            {
+
+                top:0px;
+                left: @centralized-arrow;
+                margin-top: -11px;
+                border-bottom-color: #999;
+                border-bottom-color: rgba(0,0,0,.20);
+                border-top-width: 0;
+
+                &:after
+                {
+                    top: 1px;
+                    left: -10px;
+                    content: " ";
+                    border-top-width: 0;
+                    border-bottom-color: @dropdown-box-bg;                
+                }
+            }
+        }
+
+        &.top
+        {
+            > .arrow
+            {
+                bottom:-11px;
+                left: @centralized-arrow;
+                margin-top: -11px;
+                border-top-color: #999;
+                border-top-color: rgba(0,0,0,.20);
+                border-bottom-width: 0;
+
+                &:after
+                {
+                    bottom: 1px;
+                    left: -10px;
+                    content: " ";
+                    border-bottom-width: 0;
+                    border-top-color: @dropdown-box-bg;                
+                }
+            }
+        }
+
+    }
+
+    // ---- States
+    &.in
+    {
+        .dropdown-box-content
+        {
+            opacity: 1;
+            visibility: visible;
+            
+        }
+    }
+}
