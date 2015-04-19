@@ -13,13 +13,14 @@
 
     var dropdownBoxModule = angular.module('ja.dropdownbox', []);
 
-    dropdownBoxModule.directive('dropdownBox', ['$document', function($document) {
+    dropdownBoxModule.directive('dropdownBox', ['$document', '$timeout', function($document, $timeout) {
 
         return {
             scope: {
                 target: '@target',
                 placement: '@',
-                arrow: '@'
+                arrow: '@',
+                delay: '@'
             },
             restrict: 'A',
             link: function(scope, elem, attrs) {
@@ -31,10 +32,12 @@
                     buttonClass: 'dropdown-box-button',
                     contentClass: 'dropdown-box-content',
                     arrowClass: 'arrow',
+                    mouseoverClass: 'mouseover',
                     eventName: 'dropdown-box-backdrop',
                     placement: 'left|top|bottom|right',
                     distance: angular.isDefined(attrs.mouseover) ? 11 : 20,
-                    identify: 'dropdown-box' + parseInt(Math.random() * 1000000)
+                    identify: 'dropdown-box' + parseInt(Math.random() * 1000000),
+                    delay: angular.isDefined(scope.delay) ? +scope.delay : 2000
                 };
 
 
@@ -60,8 +63,20 @@
                         return;
                     }
                     if (element.container.hasClass('in')) {
-                        element.container.removeClass('in');
-                        angular.element($document).off(eventName);
+
+                        //If delay
+                        if (angular.isDefined(scope.delay)) {
+                            $timeout(function() {
+                                element.container.removeClass('in');
+                                angular.element($document).off(eventName);
+                            }, settings.delay);
+                        } else {
+                            element.container.removeClass('in');
+                            angular.element($document).off(eventName);
+                        }
+
+
+
                     }
                 }
 
@@ -143,6 +158,15 @@
                     element.content.prepend(element.arrow);
                 }
 
+                //Mousover 
+                if (angular.isDefined(attrs.mouseover)) {
+
+                    //add class in content
+                    element.content.addClass(settings.mouseoverClass);
+
+
+                }
+
                 //Insert container before button element
                 element.button.before(element.container);
 
@@ -152,6 +176,7 @@
                 //Insert target into container
                 element.container.append(element.content);
 
+                //Define the positions os content element
                 setPosition();
 
 
