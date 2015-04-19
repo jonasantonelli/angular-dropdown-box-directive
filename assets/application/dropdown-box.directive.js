@@ -31,6 +31,7 @@
                     buttonClass: 'dropdown-box-button',
                     contentClass: 'dropdown-box-content',
                     arrowClass: 'arrow',
+                    mouseoverClass: 'mouseover',
                     eventName: 'dropdown-box-backdrop',
                     placement: 'left|top|bottom|right',
                     distance: angular.isDefined(attrs.mouseover) ? 11 : 20,
@@ -141,6 +142,11 @@
                 if (scope.arrow) {
                     element.content.addClass(scope.placement);
                     element.content.prepend(element.arrow);
+                }
+
+                //If Mousover add class in content
+                if(angular.isDefined(attrs.mouseover)){
+                    element.content.addClass(settings.mouseoverClass);
                 }
 
                 //Insert container before button element
