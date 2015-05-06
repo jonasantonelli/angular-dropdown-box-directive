@@ -6,6 +6,8 @@ Angular Dropdown Box is a directive that facilitates the creation of dropdown co
 
 Download [Angular Dropdown Box(v.0.1.0)](http://jonasantonelli.github.io/angular-dropdown-box-directive/)
 
+[Demo](http://sample.jonasantonelli.com/angular-dropdown-box-directive/)
+
 
 ## Get Started :
 
